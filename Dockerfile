@@ -1,21 +1,21 @@
 
 FROM maven:3.8.4-openjdk-17 AS build
 
-WORKDIR /app/server
+WORKDIR /app/books-server
 
-COPY server/pom.xml .
+COPY books-server/pom.xml .
 
 RUN mvn dependency:go-offline
 
-COPY server/src ./src
+COPY books-server/src ./src
 
 RUN mvn package
 
 FROM openjdk:17-jdk-slim
 
-WORKDIR /app/server
+WORKDIR /app/books-server
 
-COPY --from=build /app/server/target/ai-books.jar-0.0.1-SNAPSHOT.jar .
+COPY --from=build /app/books-server/target/ai-books-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8080
 

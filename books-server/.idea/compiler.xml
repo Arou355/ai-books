@@ -7,13 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AIBooks" />
+        <module name="BooksBackend" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AIBooks" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AIBooks" options="-parameters" />
+      <module name="BooksBackend" options="-parameters" />
     </option>
   </component>
 </project>

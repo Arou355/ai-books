@@ -1,5 +1,7 @@
 # SERVER API Documentation
 
+The Swagger Springfox documentation for this project can be accessed via url [https://ai-books.onrender.com/swagger-ui/index.html](https://ai-books.onrender.com/swagger-ui/index.html).
+
 ## Order Endpoints
 
 ### Create Order
